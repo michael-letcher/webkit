@@ -4,6 +4,7 @@ const path = require('path');
 const webpack = require('webpack');
 const ExtractTextWebpackPlugin = require('extract-text-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const OptimizeCSSAssets = require('optimize-css-assets-webpack-plugin');
 
 let config = {
   // Starting point of the application
@@ -51,7 +52,9 @@ let config = {
     ]
   },
   plugins: [
-    new ExtractTextWebpackPlugin('style.css') // call the plugin constructor and name the CSS file
+    // new webpack.optimize.UglifyJsPlugin(),
+    new ExtractTextWebpackPlugin('style.css'), // call the plugin constructor and name the CSS file
+    new OptimizeCSSAssets()
   ],
   devtool: 'source-map',
   devServer: {
