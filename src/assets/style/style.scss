@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display|Raleway');
+
+
+$heading-font: 'Playfair Display';
+$body-font: Raleway, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+$primary-bg-color: #665555;
+$primary-color: #ffffff;
+
+html {
+    font-size: 1
+}
+
+html, body {
+    margin: 0;
+    font-size: 24px;
+    text-align: center;
+    color: $primary-color;
+    font-family: $body-font;
+    background-color: $primary-bg-color;
+}
