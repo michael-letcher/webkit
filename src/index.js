@@ -6,6 +6,6 @@ class Car {
     }
 }
 
-const bmw = new Car;
+const bmw = new Car();
 
 bmw.manafacturer('bmw');
