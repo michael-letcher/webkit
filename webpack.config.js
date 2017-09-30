@@ -52,9 +52,7 @@ let config = {
     ]
   },
   plugins: [
-    // new webpack.optimize.UglifyJsPlugin(),
     new ExtractTextWebpackPlugin('style.css'), // call the plugin constructor and name the CSS file
-    new OptimizeCSSAssets()
   ],
   devtool: 'source-map',
   devServer: {
@@ -68,6 +66,7 @@ module.exports = config;
 
 if (process.env.NODE_ENV === 'production') {
   module.exports.plugins.push(
-    new webpack.optimize.UglifyJsPlugin() // call the uglify plugin
+    new webpack.optimize.UglifyJsPlugin(), // call the uglify plugin
+    new OptimizeCSSAssets()
   );
 }
